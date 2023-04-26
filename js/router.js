@@ -21,7 +21,7 @@ export class Router {
     const route = this.routes[pathname] 
 
     
-    fetch(route).then(data => data.text)
+    fetch(route).then(data => data.text())
     .then(html => {
         document.querySelector('#app').innerHTML = html
     })
